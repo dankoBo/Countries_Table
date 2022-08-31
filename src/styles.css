@@ -1,0 +1,32 @@
+h1 {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    margin: 0 auto;
+    width: 70%;
+    border-collapse: collapse;
+    text-align: center;
+}
+  
+td, th {
+    border: 1px solid silver;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+th {
+    background-color: #0057B8;
+    color: white;
+}
+
+tr:nth-child(2n) {
+    background-color: #FFD700;
+}
+

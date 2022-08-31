@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./external-service.js"></script>
+    <script type="module" src="app.js"></script>
+    <title>DOM</title>
+  </head>
+  <body>
+    
+    <div id="app-root">
+
+      <h1>Cuntries Search</h1>
+
+      <form class="form" id="radioForm">
+        <p>Please choose type of search:</p>
+        <div class="radio">
+          <div class="radio__region">
+            <input type="radio" id="byRegion" name="search" value="region">
+            <label for="byRegion">By Region</label>
+          </div>
+          
+          <div class="radio__language">
+            <input type="radio" id="byLanguage" name="search" value="language">
+            <label for="byLanguage">By Language</label>
+          </div>
+        </div>
+      </form>
+  
+      <form class="form" id="listForm">
+        <p>Please choose search query:</p>
+        <select name="list" id="selectItems">
+          <option>Select value</option>
+        </select>
+      </form>
+
+    </div>
+
+    <div class="table"></div>
+
+  </body>
+</html>
