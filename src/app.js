@@ -21,31 +21,19 @@ function checkRadioButton() {
             }
         })
     })
-}
-checkRadioButton()
-
-function createDropDownList(type) {
-    type.forEach(item => {
-        let option = document.createElement('option')
-        option.classList.add('new-option')
-        option.value = item
-        option.innerHTML = item
-        select.append(option)
-
-        select.addEventListener('change', () => {
-            let selectOptions = select.options[select.selectedIndex].text;
+    
+    select.addEventListener('change', () => {
+        let selectOptions = select.options[select.selectedIndex].text;
 
             if (type === regionList) {
                 let getByRegion = externalService.getCountryListByRegion(selectOptions)
                 createTable(getByRegion)
             }
 
-            if (type === languageList) {
-                let getByLanguage = externalService.getCountryListByLanguage(selectOptions)
-                createTable(getByLanguage)
-            }
-        })
-    })
+    if (dataType === 'languageList') {
+        let getByLanguage = externalService.getCountryListByLanguage(selectOptions)
+        createTable(getByLanguage)
+    }
 }
 
 function removeList() {
